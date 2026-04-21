@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StorTycoon</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+    <h1>Storage Driver Clicker</h1>
+    <div class="computer">
+        <div class="centerer">
+        <div id="screen">
+            <div id="turnOn">
+                <h1>Welcome USER</h1>
+                <div class="bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div id="desktop">
+                <header>
+                    <div>
+                <h3>StorTycoon</h3>
+            
+                <h5>My Files</h5>
+                </div>
+                <div>
+                    <h3 id="money">$5</h3 >
+                </div>
+                </header>
+                <br>
+                <div id="testFiles">
+
+                </div>
+                <div class="myDrive">
+                <div class="info">
+                    <div>
+                <h5>My Drive</h5>
+                <ul>
+                    <br>
+                    <li id="listed">Inserted: false</li>
+                    <li id="storage">Storage: 0B/1B</li>
+                    <li id="speed">Speed: 0B/s</li>
+                </ul>
+                </div>
+                <div id="driveFiles">
+
+                </div>
+                
+                </div>
+                <div id="download">
+                    <h3>Copying</h3>
+                    <p id="time"></p>
+                    <div class="miniBar">
+                        
+                        <div class="progress-noanim"></div>
+                    </div>
+                </div>
+                </div>  
+                
+            </div>
+        </div>
+        </div>
+        <div class="bottom">
+        <h4>My PC</h4>
+            
+        <div class="surround">
+            <h5>Card Slot</h5>
+        <div id="cardSlot"></div>
+        </div>
+       
+        </div>
+    </div>
+     <div id="smallCard">
+            <img src="Connector.png">
+            <div class="sticker">
+            <h4 >MyDrive</h4>
+           <h3>Back</h3>
+           <p>All rights reserved to someone</p>
+            </div>
+        </div>
+    <br><br>
+    <div class="overlay">
+        <div>
+        <div id="card">
+            <img src="Connector.png">
+            <div class="sticker">
+            <h4 contenteditable>MyDrive</h4>
+            <div id="specifics">
+                <p id="cardType">Type: mSSD</p>
+                <p id="spaceShow">Space: 1B</p>
+                <p id="speedShow">Speed: 1B/s</p>
+                
+            </div>
+            </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="buttons">
+    <button id="addSpeed">Add Speed ($1) (+1)</button>
+    <button id="addSpace">Add Space ($1) (+1)</button>
+    <button id="prestige">Add Prestige ($100)</button>
+
+    </div></div>
+    
+        <template id="template">
+            <div class="fileDiv">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px"><path d="M 7 2 L 7 48 L 43 48 L 43 14.59375 L 42.71875 14.28125 L 30.71875 2.28125 L 30.40625 2 Z M 9 4 L 29 4 L 29 16 L 41 16 L 41 46 L 9 46 Z M 31 5.4375 L 39.5625 14 L 31 14 Z" id="file"/></svg>
+        <h5 id="fileName">File</h5>
+        </div>
+        </template>
+        <dialog id="win">
+            <h4>You Won!</h4>
+            <p>You successfully made a powerful storage drive that can even handle 2TB!</p>
+            <button id="tryAgain">Try again?</button>
+        </dialog>
+        <dialog id="start">
+            <h2>Welcome User!</h2>
+            <p>In this game, the goal is to reach 2TB, you start from 1B, you add speed and increase prestige. The more files you drag, the more relative amount of money increases (5B = $5 or 10kB = $10,000). Click the Card Slot box surrounding the actual slot to insert/eject. You drag files and you will have to wait the same amount of time as using the ssd and copying the file in real life, so make sure that you make the download speed worth it!</p>
+            <button id="startClose">Close</button>
+        </dialog>
+        <script src="define.js"></script>
+        <script src="clicking.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
