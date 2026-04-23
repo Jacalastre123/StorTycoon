@@ -1,0 +1,313 @@
+   @font-face {
+            src: url("public-pixel-font/PublicPixel-rv0pA.ttf") format("TrueType");
+            font-family: "pixel";
+
+        }
+        .computer {
+            border: 1px solid black;
+            min-height: 50vh;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            box-shadow: 5px 10px 15px black;
+        }
+
+        #screen {
+            height: 45vh;
+            background-color: black;
+            margin-top: 5px;
+            width: 98%;
+            display:flex;
+            align-self: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            font-family: "pixel";
+        }
+
+        #screen button{
+            background-color: blue;
+            border: 1px solid white;
+            color: white;
+            padding: 1px;
+        }
+
+        .centerer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bottom {
+            display: flex;
+            margin: 2px;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #cardSlot {
+            height: 1vh;
+            width: 110px;
+            background-color: rgb(209, 209, 209);
+            margin: 5px;
+        }
+
+        .surround * {
+            z-index: -5;
+        }
+
+        .surround {
+            border: 1px solid brown;
+            text-align: center;
+            
+        }
+
+        #card, #smallCard {
+            background-color: rgb(56, 255, 106);
+            
+            display: flex;
+            flex: flexbox;
+            align-items: center;
+            justify-content: center;
+            height: 230px;
+            width: 99px;
+            position: relative;
+            transition: transform 1s;
+
+        }
+        #card {
+            margin: 5px;
+        }
+        @keyframes insertion {
+            0% {
+                transform: scaleY(1);
+                top: 65vh;
+            }
+
+            100% {
+                transform: scaleY(0);
+                top: 50vh;
+            }
+        }
+
+        @keyframes insertion-rev {
+            0% {
+                transform: scaleY(0);
+                top: 50vh;
+            }
+
+            100% {
+                transform: scaleY(1);
+                top: 65vh;
+            }
+        }
+        #smallCard {
+            top: 65vh;
+            left: 82.5vw;
+            position:absolute;
+           display: none;
+            width: 100px;
+        }
+        #smallCard * {
+            overflow: scroll;
+        }
+        .sticker {
+            background-color: rgb(0, 213, 71);
+            text-align: center;
+            justify-content: baseline;
+            width: 100%;
+            height: 80%;
+            border: 1px solid black;
+
+        }
+
+        img[src="Connector.png"] {
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .turnOn {
+            text-align: center;
+            
+        }
+        .bar, .miniBar {
+            background-color: black;
+            border: 2px solid white;
+            height: 50px;
+            width: 60vw;
+            position: relative;
+        }
+
+        .miniBar {
+            background-color: blue;
+        }
+        @keyframes slide {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+        .progress, .progress-noanim {
+            background-color: white;
+            top: 0;
+            left: 0;
+            position: absolute;
+            animation: slide 1s;
+        height: 100%;
+        width: 100%;
+
+        }
+
+        .progress-noanim {
+            animation: none;
+           width: 0%;
+        }
+
+        #turnOn {
+            top: 0;
+            left: 0;
+            position: absolute;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+        flex-direction: column;
+        z-index: 5; 
+        background-color: rgb(45, 45, 45);
+        
+        }
+
+        #desktop {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+        }
+        #testFiles, #driveFiles {
+            border: 1px solid white;
+            width: 90vw;
+            height: 14vh;
+            overflow: scroll;
+            display: flex;
+            gap: 10px;
+           
+            align-items: center;
+            
+          
+        }
+
+        #driveFiles {
+            width: 42.9vw;
+            
+            overflow: scroll;
+            display: default;
+            display: flex;
+            align-items: center;
+
+        }
+     
+        #drivefiles div {
+            z-index: -100;
+            
+        }
+
+    
+     
+        #file {
+            fill: white;
+        }
+        #desktop * {
+            margin: 2px;
+        }
+
+        .info {
+            display: flex;
+            gap: 5px;
+            width: 100%;
+        }
+
+        .info * {
+            flex: 1;
+        }
+        .fileDiv {
+            position: relative;
+            padding: 5px;
+        }
+
+        .fileDiv * {
+            margin: 10px;
+        }
+
+        #download {
+            z-index: 6000;
+            margin: 0;
+            position: absolute;
+            border: 1px solid white;
+            padding: 5px;
+            background-color: rgb(123, 155, 251);
+            top: 45%;
+            left: 20%;
+            display: none;
+            box-shadow: 0px 0px 40px rgb(140, 192, 255);
+     
+        }
+
+        header {
+            display: flex;
+         
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        header div {
+            height: 100%;
+            width: 45vw;
+        }
+
+        .overlay {
+            background-color: rgb(209, 209, 209);
+           display: flex;
+           align-items: center;
+           justify-content: space-evenly;
+         gap: 10px;
+        }
+        .overlay button {
+             font-size: 2em;
+             background-color: rgb(189, 188, 188);
+             border-radius: 5px;
+             display: block;
+        }
+        
+        dialog {
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.5);
+            backdrop-filter: blur(100px);
+        }
+
+        button {
+            background-color: white;
+            border: 0.5px solid black;
+            
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
