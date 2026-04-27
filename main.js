@@ -101,11 +101,12 @@ function arrange() {
                           delBut.id = "Delete"
                           delBut.innerText = "Delete"
                           delBut.addEventListener("click", (event) => {
-                     
+                     if (allowDrag) {
                                
                                 event.target.parentElement.remove()
                                 totalStored -= Number(fileNameText.replace("G", "000000000").replace("B", "").replace("k", "000").replace("T", "000000000000").replace("M", "000000"))
                                 storage.innerText = "Storage: " + totalStored + "/" + space
+                     }
 
                           })
                             el.appendChild(delBut)
