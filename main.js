@@ -9,7 +9,7 @@ function arrange() {
         
                     if (item < 1000) {
                         fileName.innerText = item + "B"
-                      
+                        
                     }
                     else if (item < 1000 ** 2) {
                         fileName.innerText = item / 1000 + "kB"
