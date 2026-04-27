@@ -1,7 +1,7 @@
  document.addEventListener("click", event => {
             const spaceShow = document.getElementById("spaceShow")
             const speedShow = document.getElementById("speedShow")
-            moneyID.innerText = "$" + money
+            
 
             if (event.target.id === "startClose") {
                 start.close()
@@ -184,6 +184,24 @@ timeout = setTimeout(function() {
             }
             listed.innerText = "Inserted: " + isConnected
             timeout = null
-
+         
             }
+                if (money < 1000) {
+                        moneyID.innerText = "$" + money 
+                        
+                    }
+                    else if (money < 1000 ** 2) {
+                        moneyID.innerText = "$" + money
+                    }
+
+                    else if (money < 1000 ** 3) {
+                        moneyID.innerText = "$" + money / 1000 ** 2 + "M"
+                    }
+
+                    else if (money < 1000 ** 4) {
+                        moneyID.innerText = money / 1000 ** 3 + "B"
+                    }
+                    else {
+                        moneyID.innerText = money / 1000 ** 4 + "T"
+                    }
         })
