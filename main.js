@@ -112,7 +112,25 @@ function arrange() {
                             el.appendChild(delBut)
                           let fileNameNum = Number(fileNameText.replace("G", "000000000").replace("B", "").replace("k", "000").replace("T", "000000000000").replace("M", "000000"))
                           money += fileNameNum
-                          moneyID.innerText = "$" + money
+                     if (money < 1000) {
+                        moneyID.innerText = "$" + money 
+                        
+                    }
+                    else if (money < 1000 ** 2) {
+                        moneyID.innerText = "$" + money
+                    }
+
+                    else if (money < 1000 ** 3) {
+                        moneyID.innerText = "$" + money / 1000 ** 2 + "M"
+                    }
+
+                    else if (money < 1000 ** 4) {
+                        moneyID.innerText = money / 1000 ** 3 + "B"
+                    }
+                    else {
+                        moneyID.innerText = money / 1000 ** 4 + "T"
+                    }
+                       
                         if (fileNameNum === 2000000000000) {
                             document.getElementById("win").showModal()
                         }
