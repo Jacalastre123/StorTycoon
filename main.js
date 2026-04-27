@@ -104,7 +104,7 @@ function arrange() {
                      if (allowDrag) {
                                
                                 event.target.parentElement.remove()
-                                totalStored -= Number(fileNameText.replace("G", "000000000").replace("B", "").replace("k", "000").replace("T", "000000000000").replace("M", "000000"))
+                                totalStored -= Number(event.target.querySelector("#fileName").innerText.replace("G", "000000000").replace("B", "").replace("k", "000").replace("T", "000000000000").replace("M", "000000"))
                                 storage.innerText = "Storage: " + totalStored + "/" + space
                      }
 
